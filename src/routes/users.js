@@ -9,10 +9,10 @@ const {
 
 const router = Router();
 
-router.get('/', getAllUsers);
-router.post('/', createUser);
-router.put('/:id', updateUser);
-router.patch('/:id', updatePartialUser);
-router.delete('/:id', deleteUser);
+router.get('/users', getAllUsers);
+router.post('/user', createUser);
+router.put('/user/:id', updateUser);
+router.patch('/user/:id', updatePartialUser);
+router.delete('/user/:id', deleteUser);
 
 module.exports = router;

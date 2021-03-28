@@ -1,8 +1,12 @@
 const ExpressServer = require('./server/expressServer');
+const mongooseLoader = require('../loaders/mongoose')
 const config = require('../config');
 const logger = require('./logger');
 
 module.exports = async () => {
+
+    await mongooseLoader();
+    logger.info('DB loaded and conected')
     
     const server = new ExpressServer();
     logger.info('Express Loaded');
